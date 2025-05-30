@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+@plugin "daisyui";
+
+/* 🌐 Font personalizzati */
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+  --font-title: 'Playfair Display', serif;
+}
+
+/* 🌞 Tema chiaro - Sheila Light */
+@plugin "daisyui/theme" {
+  name: 'light';
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* Colori base più puliti e luminosi */
+  --color-base-100: oklch(99% 0.01 90);
+  --color-base-200: oklch(96% 0.02 85);
+  --color-base-300: oklch(93% 0.02 80);
+  --color-base-content: oklch(20% 0.02 30);
+
+  /* Primario più vivace e caldo */
+  --color-primary: oklch(68% 0.3 55);
+  --color-primary-content: oklch(100% 0.01 90);
+
+  /* Secondario più distinto */
+  --color-secondary: oklch(80% 0.18 75);
+  --color-secondary-content: oklch(20% 0.02 30);
+
+  /* Accent più vibrante */
+  --color-accent: oklch(50% 0.2 35);
+  --color-accent-content: oklch(100% 0.01 90);
+}
+
+/* 🌙 Tema scuro - Sheila Dark */
+@plugin "daisyui/theme" {
+  name: 'dark';
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  /* Base più profonda ma non troppo scura */
+  --color-base-100: oklch(25% 0.02 25);
+  --color-base-200: oklch(22% 0.02 25);
+  --color-base-300: oklch(19% 0.02 25);
+  --color-base-content: oklch(95% 0.01 90);
+
+  /* Primario più luminoso e vibrante */
+  --color-primary: oklch(75% 0.28 50);
+  --color-primary-content: oklch(15% 0.01 25);
+
+  /* Secondario più intenso */
+  --color-secondary: oklch(82% 0.22 70);
+  --color-secondary-content: oklch(15% 0.01 25);
+
+  /* Accent più ricco */
+  --color-accent: oklch(48% 0.18 35);
+  --color-accent-content: oklch(95% 0.01 90);
+}
